@@ -7,6 +7,7 @@ html {
 body {
     padding: 0;
     margin: 0;
+    background-color: white;
 }
 
 h1, h2 {
@@ -66,23 +67,26 @@ nav {
 }
 
 .offer__title__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 220px;
-    height: 75px;
-    background-color: white;
-    border-radius: 16px 0px 16px 16px;
-    a {
-        text-decoration: none;
-        outline: none;
-        color: #37474f;
-        font-weight: bold;
-        font-size: 1.25rem;
-    }
+}
 
-    i {
-        color: #2fc9ef;
-        font-size: 1.25rem;
+.templates {
+    background-image: url(../assets/img/template__bg.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1200px;
+    .templates__title {
+        text-align: center;
+        margin-bottom: 150px;
     }
+}
+
+.reviews {
+    padding-top: 90px;
+    padding-bottom: 115px;
+    background-image: url(../assets/img/reviews__bg.png);
+    background-position: 20% bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
