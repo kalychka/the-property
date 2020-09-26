@@ -1,0 +1,23 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    height: 75px;
+    background-color: white;
+    border-radius: 16px 0px 16px 16px;
+    a {
+        margin-right: 30px;
+        text-decoration: none;
+        outline: none;
+        color: #37474f;
+        font-weight: bold;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+    }
+
+    i {
+        color: #2fc9ef;
+        font-size: 1.25rem;
+    }
+}

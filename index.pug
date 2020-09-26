@@ -21,8 +21,11 @@ html(lang="en")
       .offer__title
         .container
           .title-wrapper
-            h1 Expert advice for <br> discerning buyers
-            p 
-              | Our consultants and research analysts work together 
-              | to provide understanding and clarity through the intricacies of an ever changing real estate cycle. 
-            
+            h1.title Expert advice for <br> discerning buyers
+            p.description 
+              | Our consultants and research analysts work together <br> 
+              | to provide understanding and clarity through the <br>
+              | intricacies of an ever changing real estate cycle. 
+          .offer__title__button
+            include ./components/button/button.pug 
+            +Button('Learn more')

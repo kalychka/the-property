@@ -1,6 +1,7 @@
 html {
     font-family: 'Inter', serif;
     font-size: 18px;
+    font-weight: normal;
 }
 
 body {
@@ -19,7 +20,7 @@ h1, h2 {
 
 .offer {
     background-image: url(../assets/img/offer__bg.png);
-    height: 100vh;
+    height: 900px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,12 +51,38 @@ nav {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    width: 70%;
-    h1 {
+    
+    .title {
         color: white;
         font-size: 3.125rem;
+        letter-spacing: 2px;
+        line-height: 3.75rem;
     }
-    p {
+    .description {
+        line-height: 2.25rem;
         color: white;
+    }
+
+}
+
+.offer__title__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 75px;
+    background-color: white;
+    border-radius: 16px 0px 16px 16px;
+    a {
+        text-decoration: none;
+        outline: none;
+        color: #37474f;
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    i {
+        color: #2fc9ef;
+        font-size: 1.25rem;
     }
 }
