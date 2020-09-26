@@ -1,6 +1,6 @@
 html {
     font-family: 'Inter', serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body {
@@ -10,4 +10,52 @@ body {
 
 h1, h2 {
     font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.offer {
+    background-image: url(../assets/img/offer__bg.png);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation-list {
+    list-style: none;
+    display: flex;
+    li {
+        margin-left: 55px;
+        a {
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            outline: none;
+        }
+    }
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 70%;
+    h1 {
+        color: white;
+        font-size: 3.125rem;
+    }
+    p {
+        color: white;
+    }
 }
