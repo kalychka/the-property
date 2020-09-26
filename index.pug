@@ -33,5 +33,15 @@ html(lang="en")
       .container 
         h2.templates__title Why Arda <br> Real Estate Consulting?
     section.reviews 
-      .container 
-        
+      .container
+        h2.reviews__title Client’s testimonials
+        include ./components/review/review.pug
+        div(id="reviews").carousel
+          .carousel__item
+            +review('Benrns Sturaro', 'My experience with Arda Real Estate Consulting has enabled me to better assess current market risk level at any point in the home building cycle. Also, I have been able to make new valuable contacts.', 'NY', 'item1')
+          .carousel__item
+            +review('Dave Matthews', 'Arda Real Estate Consulting has provided our company with sound, insightful, and timely consulting in a number of real estate related areas. Specifically, reports and analysis for credit reporting agencies, company valuation studies, and presentations to foreign investors have been areas where they have excelled.', 'Oregon', 'item2')
+          .carousel__item
+            +review('Benrns Sturaro', 'My experience with Arda Real Estate Consulting has enabled me to better assess current market risk level at any point in the home building cycle. Also, I have been able to make new valuable contacts.', 'NY', 'item1')
+          .carousel__item
+            +review('Dave Matthews', 'Arda Real Estate Consulting has provided our company with sound, insightful, and timely consulting in a number of real estate related areas. Specifically, reports and analysis for credit reporting agencies, company valuation studies, and presentations to foreign investors have been areas where they have excelled.', 'Oregon', 'item2')

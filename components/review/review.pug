@@ -1,0 +1,6 @@
+mixin review(name, desc, from, url)
+    .review
+        img(src=require(`./assets/img/avatars/${url}.png`).default).avatar
+        p(class="review__description")=desc
+        p(class="review__name")=name
+        p(class="review__company")=from
