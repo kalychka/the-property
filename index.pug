@@ -36,7 +36,7 @@ html(lang="en")
       .container
         h2.reviews__title Client’s testimonials
         include ./components/review/review.pug
-        div(id="reviews").carousel
+        div(id="reviews").carousel 
           .carousel__item
             +review('Benrns Sturaro', 'My experience with Arda Real Estate Consulting has enabled me to better assess current market risk level at any point in the home building cycle. Also, I have been able to make new valuable contacts.', 'NY', 'item1')
           .carousel__item
@@ -45,3 +45,21 @@ html(lang="en")
             +review('Benrns Sturaro', 'My experience with Arda Real Estate Consulting has enabled me to better assess current market risk level at any point in the home building cycle. Also, I have been able to make new valuable contacts.', 'NY', 'item1')
           .carousel__item
             +review('Dave Matthews', 'Arda Real Estate Consulting has provided our company with sound, insightful, and timely consulting in a number of real estate related areas. Specifically, reports and analysis for credit reporting agencies, company valuation studies, and presentations to foreign investors have been areas where they have excelled.', 'Oregon', 'item2')
+    footer 
+      .container
+        .contact
+          .contact__title-wrapper 
+            h2 Let us hear your <br> thoughts
+            p 
+              | If you have any questions about our 
+              | consulting <br> services, please contact us
+          form(action="#").contact__form
+            .contact__form__data
+              include ./components/input/text-field.pug
+              .name
+                +text-field('Name', 'text', 'Name')
+              .email
+                +text-field('Email', 'email', 'Email')
+            .contact__form__message
+              p Your message
+              textarea(name="message", cols="30", rows="10")
