@@ -53,7 +53,7 @@ html(lang="en")
             p 
               | If you have any questions about our 
               | consulting <br> services, please contact us
-          form(action="#").contact__form
+          form(action="#" id="request").contact__form
             .contact__form__data
               include ./components/input/text-field.pug
               .name
@@ -62,4 +62,70 @@ html(lang="en")
                 +text-field('Email', 'email', 'Email')
             .contact__form__message
               p Your message
-              textarea(name="message", cols="30", rows="10", resize=none)
+              textarea(name="message", cols="30", rows="10")
+              .contact__form__button
+                button(form="request")
+                  | Submit
+                  i.fas.fa-long-arrow-alt-right
+        .footer-wrapper 
+          .footer-wrapper__description 
+            p 
+              | Arda Real Estate Consulting provides <br>
+              | independent research and consulting services <br>
+              | related to the US housing industry.
+            p 
+              | Our experienced team of analysts and <br>
+              | consultants helps our clients identify the best <br> 
+              | risk-adjusted investment opportunities.
+          .footer-wrapper__links
+            ul.links-list
+              li Our company 
+              li 
+                p 
+                  | Our Company <br>
+                  | About Us <br> 
+                  | Research <br> 
+                  | Consulting <br>
+                  | Careers 
+            ul.links-list
+              li Our experts 
+              li 
+                p 
+                  | Team <br>
+                  | Coverage
+            ul.links-list
+              li Our values 
+              li 
+                p 
+                  | Proprietary Tools <br>
+                  | Forecasting <br>
+                  | Surveys <br>
+                  | Surban <br>
+                  | Demographics <br>
+                  | DesignLens
+            ul.links-list
+              li Contact
+              li 
+                p 
+                  | Contact Us <br>
+                  | Office Locations <br>
+                  | Newsletter Sign-Up <br>
+                  | Social Media
+        hr(color="#68a4ea")
+        .footer-bottom 
+          .footer-bottom__rights 
+            p 
+              | All rights reserved <br>
+              | Copyright © 2020
+          .footer-bottom__social 
+            ul.social-list
+              li
+                a(href="#")
+                  i.fab.fa-instagram
+              li
+                a(href="#")
+                  i.fab.fa-vk
+              
+
+        
+                  

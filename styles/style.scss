@@ -19,10 +19,16 @@ p {
     margin: 0;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
 }
+
 
 .offer {
     background-image: url(../assets/img/offer__bg.png);
@@ -85,6 +91,7 @@ nav {
     background-repeat: no-repeat;
     height: 1200px;
     padding-top: 90px;
+    padding-bottom: 650px;
     .templates__title {
         text-align: center;
         margin-bottom: 150px;
@@ -93,10 +100,10 @@ nav {
 
 .reviews {
     padding-top: 90px;
-    padding-bottom: 300px;
+    padding-bottom: 450px;
     background-image: url(../assets/img/reviews__bg.png);
     background-position-x: 20%;
-    background-position-y: 90%;
+    background-position-y: 75%;
     background-repeat: no-repeat;
 }
 
@@ -131,7 +138,7 @@ nav {
     height: 75px;
     border: 2px solid #2fc9ef;
     border-radius: 50%;
-    box-shadow: 0px 4px 7px 2px rgba($color: #000000, $alpha: 0.7);
+    box-shadow: 0px 6px 11px 0px rgba($color: #000000, $alpha: 0.7);
     cursor: pointer;
     i {
         color: #2fc9ef;
@@ -147,19 +154,29 @@ nav {
     right: -100px;  
 }
 
+.slick-slide {
+    outline: none;
+}
+
 footer {
-    height: 1200px;
+    position: relative;
+    padding-top: 700px;
+    padding-bottom: 40px;
     background-image: url(../assets/img/footer__bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.contact { 
-    width: 100%;
-    max-width: 1300px;
+.contact {
+    position: absolute;
+    top: -170px;
+    left: 50%;
+    width: 1200px;
+    margin-left: -600px;
     background-image: url(../assets/img/form__bg.png);
-    margin: 0 auto;
+    background-repeat: no-repeat;
+    
     padding: 130px 90px 85px 85px;
     border-radius: 16px 0px 16px 16px;
     box-sizing: border-box;
@@ -189,6 +206,8 @@ footer {
 .contact__form__message {
     grid-column: 2 / 3;
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
     p {
         font-size: 1.0037rem;
         font-weight: bold;
@@ -224,3 +243,101 @@ footer {
         margin-bottom: 37px;
     } 
 }
+
+.contact__form__button {
+    
+    align-self: flex-end;
+    margin-top: 23px;
+    button {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 180px;
+        height: 75px;
+        background-color: #2fc9ef;
+        border: none;
+        border-radius: 8px 0px 8px 8px;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        outline: none;
+        i {
+            color: white;
+            font-size: 1.5625rem;
+        }
+        
+    }
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 140px;
+    
+}
+
+.footer-wrapper__description {
+    p {
+        color: white;
+        line-height: 1.75rem;
+        margin-bottom: 40px;
+    }
+}
+
+.footer-wrapper__links {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 -5px;
+    margin-bottom: 80px;
+    .links-list {
+        list-style: none;
+        width: calc(1/4*100% - 20px);
+        margin: 5px;
+        li {
+            color: white;
+            line-height: 2.25rem;
+        }
+        & li:first-child {
+            font-weight: bold;
+            font-size: 1.125rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    .footer-bottom__rights p {
+        color: white;
+        font-size: 0.875rem;
+    }
+    .footer-bottom__social .social-list {
+        list-style: none;
+        display: flex;
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: white;
+            i {
+                color: #4896e9;
+                font-size: 1.25rem;
+            }
+        }
+        & li:last-child {
+            margin-left: 10px;
+        }
+    }
+}
+
+
