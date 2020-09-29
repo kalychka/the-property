@@ -47,7 +47,7 @@ html(lang="en")
                   <a class="nav-link active" id="home-tab" data-toggle="tab" href="#d2" role="tab" aria-controls="home" aria-selected="true">2D Планировки</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">3D Планировки</a>
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#d3" role="tab" aria-controls="profile" aria-selected="false">3D Планировки</a>
                 </li>
               </ul>
               <div class="tab-content" id="myTabContent">
@@ -61,7 +61,7 @@ html(lang="en")
                     - for (i = 11; i <= 13; i++)
                       +property-item(`2d__property-item${i}.jpg`, '2D Планировки коммерческой недвижимости', 'Планировки коммерческой недвижимости в 2D формате. Без расстановки мебели. Цена договорная: зависит от количества комнат и подсобных помещений.', 'От 800 рублей') 
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="tab-pane fade" id="d3" role="tabpanel" aria-labelledby="profile-tab">
                   .property-item
                     - for (i = 1; i <= 5; i++)
                       +property-item(`3d__property-item${i}.jpg`, '3D планировка без расстановки мебели', 'Планировки квартир в 3D формате. Без расстановки мебели', 'От 250 рублей')
@@ -71,13 +71,17 @@ html(lang="en")
                       +property-item(`3d__property-item${i}.jpg`, '3D планировка коммерческой недвижимости', 'Планировки коммерческой недвижимости в 3D формате. Без расстановки мебели', 'От 1000 рублей')                      
                 </div>
               </div>
+        .templates-button 
+          .row.justify-content-center 
+            .col-xl-3
+              +Button('Contact us now')
     section.reviews 
       .container
         .row 
           .col-xl-12
             h2.reviews__title Client’s testimonials
-        .row
-          .col-xl-10.offset-xl-1.justify-content-center
+        .row.justify-content-center
+          .col-xl-10
             include ./components/review/review.pug
             div(id="reviews").carousel 
               .carousel__item

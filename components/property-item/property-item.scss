@@ -1,6 +1,7 @@
 .card {
     width: 17rem;
     cursor: pointer;
+    box-sizing: border-box;
     &:hover {
         border: 2px solid #2fc9ef;
     }
