@@ -39,12 +39,25 @@ hr {
 
 
 .offer {
+    
     background-image: url(../assets/img/offer__bg.png);
-    height: 900px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 80px;
+    padding-bottom: 250px;
+}
+
+.offer-parallax__star {
+    position: absolute;
+    top: 0px;
+    width: 80%; 
+}
+
+.offer-parallax__ellipse {
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }
 
 header {

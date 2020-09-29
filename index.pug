@@ -6,7 +6,9 @@ html(lang="en")
     title Document
   body
     include ./components/loader/loader.pug
-    section.offer      
+    section.offer
+      img(src=require(`./assets/img/offer-star.png`).default).offer-parallax__star
+      img(src=require(`./assets/img/offer-ellipse.png`).default).offer-parallax__ellipse  
       header 
         .container
           .row
