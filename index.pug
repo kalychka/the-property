@@ -37,6 +37,32 @@ html(lang="en")
     section.templates 
       .container 
         h2.templates__title Why Arda <br> Real Estate Consulting?
+        .row 
+          .col-xl-12
+            .templates-wrapper
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#d2" role="tab" aria-controls="home" aria-selected="true">2D Планировки</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">3D Планировки</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                include ./components/property-item/property-item.pug
+                <div class="tab-pane fade show active" id="d2" role="tabpanel" aria-labelledby="home-tab">
+                  .property-item
+                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+                  
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                </div>
+              </div>
     section.reviews 
       .container
         .row 
@@ -57,25 +83,30 @@ html(lang="en")
     footer
       .container     
         .contact
-          .contact__title-wrapper 
-            h2 Let us hear your <br> thoughts
-            p 
-              | If you have any questions about our 
-              | consulting <br> services, please contact us
-          form(action="#" id="request").contact__form
-            .contact__form__data
-              include ./components/input/text-field.pug
-              .name
-                +text-field('Name', 'text', 'Name')
-              .email
-                +text-field('Email', 'email', 'Email')
-            .contact__form__message
-              p Your message
-              textarea(name="message", cols="30", rows="10")
-              .contact__form__button
-                button(form="request")
-                  | Submit
-                  i.fas.fa-long-arrow-alt-right
+          .row
+            .col-12
+              .contact__title-wrapper 
+                h2 Let us hear your <br> thoughts
+                p 
+                  | If you have any questions about our 
+                  | consulting <br> services, please contact us
+              form(action="#" id="request").contact__form
+                .row 
+                  .col-xl-5
+                    .contact__form__data
+                      include ./components/input/text-field.pug
+                      .name
+                        +text-field('Name', 'text', 'Name')
+                      .email
+                        +text-field('Email', 'email', 'Email')
+                  .col-xl-7
+                    .contact__form__message
+                      p Your message
+                      textarea(name="message", cols="30", rows="10")
+                      .contact__form__button
+                        button(form="request")
+                          | Submit
+                          i.fas.fa-long-arrow-alt-right
         .footer-wrapper
           .row               
             .col-xl-4

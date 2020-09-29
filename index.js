@@ -14,6 +14,8 @@ import './components/review/review.js'
 
 import './components/input/text-field.js'
 
+import './components/property-item/property-item.js'
+
 import '../node_modules/jquery/dist/jquery.js'
 import './assets/slick-1.8.1/slick/slick.js'
 import './assets/slick-1.8.1/slick/slick.css'

@@ -1,4 +1,5 @@
-html {
+html,
+body {
     font-family: 'Inter', serif;
     font-size: 18px;
     font-weight: normal;
@@ -103,13 +104,39 @@ nav {
     background-position-y: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1200px;
+    
     padding-top: 90px;
-    padding-bottom: 650px;
+    padding-bottom: 400px;
     .templates__title {
         text-align: center;
         margin-bottom: 150px;
     }
+}
+
+.templates-wrapper {
+    background-color: white;
+    border-radius: 16px 0px 16px 16px;
+    box-shadow: 0px 3px 20px 0px rgba($color: #000000, $alpha: 0.4);
+}
+
+.nav-link {
+    font-weight: bold;
+    color: #2fc9ef;
+    font-size: 1.125rem;
+}
+
+
+
+
+.tab-content {
+    padding: 75px 75px 100px 70px;
+}
+
+.property-item {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    row-gap: 20px;
+    justify-items: center;
 }
 
 .reviews {
@@ -210,17 +237,8 @@ footer {
     }
 }
 
-.contact__form {
-    
-    display: grid;
-    grid-template-columns: 350px auto;
-    grid-template-rows: auto;
-    column-gap: 40px;
-}
-
 .contact__form__message {
-    grid-column: 2 / 3;
-    max-width: 500px;
+    
     display: flex;
     flex-direction: column;
     p {
@@ -230,9 +248,7 @@ footer {
         margin-bottom: 18px;
     }
     textarea {
-        width: 100%;
-        max-width: 500px;
-        max-height: 210px;
+        max-height: 220px;
         border: 1px solid #a4bae8;
         border-radius: 8px 0px 8px 8px;
         padding: 10px;
