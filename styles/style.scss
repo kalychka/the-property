@@ -24,9 +24,8 @@ ul {
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+hr {
+    border: 1px solid #68a4ea;
 }
 
 .loader_hide > .loader-wrapper {
@@ -47,9 +46,15 @@ ul {
     padding-top: 80px;
 }
 
+header {
+    margin-bottom: 60px;
+}
+
 nav {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    height: 40px;
 }
 
 .navigation-list {
@@ -77,6 +82,7 @@ nav {
         font-size: 3.125rem;
         letter-spacing: 2px;
         line-height: 3.75rem;
+        margin-bottom: 40px;
     }
 
     .description {
@@ -122,6 +128,8 @@ nav {
 
 .carousel {
     position: relative;
+    
+    
 }
 
 .carousel__item {
@@ -279,13 +287,11 @@ footer {
 }
 
 .footer-wrapper {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 140px;
-    
+    margin-bottom: 80px;
 }
 
-.footer-wrapper__description {
+
+.footer__description {
     p {
         color: white;
         line-height: 1.75rem;
@@ -293,11 +299,11 @@ footer {
     }
 }
 
-.footer-wrapper__links {
+.footer__links {
     display: flex;
     justify-content: flex-start;
     margin: 0 -5px;
-    margin-bottom: 80px;
+    
     .links-list {
         list-style: none;
         width: calc(1/4*100% - 20px);

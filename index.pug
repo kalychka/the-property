@@ -9,45 +9,53 @@ html(lang="en")
     section.offer      
       header 
         .container
-          nav 
-            ul.navigation-list 
-              li 
-                a(href="#") Our company
-              li 
-                a(href="#") Our experts
-              li 
-                a(href="#") Our values
-              li 
-                a(href="#") Our contact
+          .row
+            .col-xl-12
+              nav 
+                ul.navigation-list 
+                  li 
+                    a(href="#") Our company
+                  li 
+                    a(href="#") Our experts
+                  li 
+                    a(href="#") Our values
+                  li 
+                    a(href="#") Our contact
       .offer__title
         .container
-          .title-wrapper
-            h1.title Expert advice for <br> discerning buyers
-            p.description 
-              | Our consultants and research analysts work together <br> 
-              | to provide understanding and clarity through the <br>
-              | intricacies of an ever changing real estate cycle. 
-          .offer__title__button
-            include ./components/button/button.pug 
-            +Button('Learn more')
+          .row
+            .col-xl-8
+              .title-wrapper
+                h1.title Expert advice for <br> discerning buyers
+                p.description 
+                  | Our consultants and research analysts work together <br> 
+                  | to provide understanding and clarity through the <br>
+                  | intricacies of an ever changing real estate cycle. 
+              .offer__title__button
+                include ./components/button/button.pug 
+                +Button('Learn more')
     section.templates 
       .container 
         h2.templates__title Why Arda <br> Real Estate Consulting?
     section.reviews 
       .container
-        h2.reviews__title Client’s testimonials
-        include ./components/review/review.pug
-        div(id="reviews").carousel 
-          .carousel__item
-            +review('Benrns Sturaro', 'My experience with Arda Real Estate Consulting has enabled me to better assess current market risk level at any point in the home building cycle. Also, I have been able to make new valuable contacts.', 'NY', 'item1')
-          .carousel__item
-            +review('Dave Matthews', 'Arda Real Estate Consulting has provided our company with sound, insightful, and timely consulting in a number of real estate related areas. Specifically, reports and analysis for credit reporting agencies, company valuation studies, and presentations to foreign investors have been areas where they have excelled.', 'Oregon', 'item2')
-          .carousel__item
-            +review('Benrns Sturaro', 'My experience with Arda Real Estate Consulting has enabled me to better assess current market risk level at any point in the home building cycle. Also, I have been able to make new valuable contacts.', 'NY', 'item1')
-          .carousel__item
-            +review('Dave Matthews', 'Arda Real Estate Consulting has provided our company with sound, insightful, and timely consulting in a number of real estate related areas. Specifically, reports and analysis for credit reporting agencies, company valuation studies, and presentations to foreign investors have been areas where they have excelled.', 'Oregon', 'item2')
-    footer 
-      .container
+        .row 
+          .col-xl-12
+            h2.reviews__title Client’s testimonials
+        .row
+          .col-xl-10.offset-xl-1.justify-content-center
+            include ./components/review/review.pug
+            div(id="reviews").carousel 
+              .carousel__item
+                +review('Benrns Sturaro', 'My experience with Arda Real Estate Consulting has enabled me to better assess current market risk level at any point in the home building cycle. Also, I have been able to make new valuable contacts.', 'NY', 'item1')
+              .carousel__item
+                +review('Dave Matthews', 'Arda Real Estate Consulting has provided our company with sound, insightful, and timely consulting in a number of real estate related areas. Specifically, reports and analysis for credit reporting agencies, company valuation studies, and presentations to foreign investors have been areas where they have excelled.', 'Oregon', 'item2')
+              .carousel__item
+                +review('Benrns Sturaro', 'My experience with Arda Real Estate Consulting has enabled me to better assess current market risk level at any point in the home building cycle. Also, I have been able to make new valuable contacts.', 'NY', 'item1')
+              .carousel__item
+                +review('Dave Matthews', 'Arda Real Estate Consulting has provided our company with sound, insightful, and timely consulting in a number of real estate related areas. Specifically, reports and analysis for credit reporting agencies, company valuation studies, and presentations to foreign investors have been areas where they have excelled.', 'Oregon', 'item2')
+    footer
+      .container     
         .contact
           .contact__title-wrapper 
             h2 Let us hear your <br> thoughts
@@ -68,51 +76,54 @@ html(lang="en")
                 button(form="request")
                   | Submit
                   i.fas.fa-long-arrow-alt-right
-        .footer-wrapper 
-          .footer-wrapper__description 
-            p 
-              | Arda Real Estate Consulting provides <br>
-              | independent research and consulting services <br>
-              | related to the US housing industry.
-            p 
-              | Our experienced team of analysts and <br>
-              | consultants helps our clients identify the best <br> 
-              | risk-adjusted investment opportunities.
-          .footer-wrapper__links
-            ul.links-list
-              li Our company 
-              li 
+        .footer-wrapper
+          .row               
+            .col-xl-4
+              .footer__description 
                 p 
-                  | Our Company <br>
-                  | About Us <br> 
-                  | Research <br> 
-                  | Consulting <br>
-                  | Careers 
-            ul.links-list
-              li Our experts 
-              li 
+                  | Arda Real Estate Consulting provides <br>
+                  | independent research and consulting services <br>
+                  | related to the US housing industry.
                 p 
-                  | Team <br>
-                  | Coverage
-            ul.links-list
-              li Our values 
-              li 
-                p 
-                  | Proprietary Tools <br>
-                  | Forecasting <br>
-                  | Surveys <br>
-                  | Surban <br>
-                  | Demographics <br>
-                  | DesignLens
-            ul.links-list
-              li Contact
-              li 
-                p 
-                  | Contact Us <br>
-                  | Office Locations <br>
-                  | Newsletter Sign-Up <br>
-                  | Social Media
-        hr(color="#68a4ea")
+                  | Our experienced team of analysts and <br>
+                  | consultants helps our clients identify the best <br> 
+                  | risk-adjusted investment opportunities.
+            .col-xl-8
+              .footer__links
+                ul.links-list
+                  li Our company 
+                  li 
+                    p 
+                      | Our Company <br>
+                      | About Us <br> 
+                      | Research <br> 
+                      | Consulting <br>
+                      | Careers 
+                ul.links-list
+                  li Our experts 
+                  li 
+                    p 
+                      | Team <br>
+                      | Coverage
+                ul.links-list
+                  li Our values 
+                  li 
+                    p 
+                      | Proprietary Tools <br>
+                      | Forecasting <br>
+                      | Surveys <br>
+                      | Surban <br>
+                      | Demographics <br>
+                      | DesignLens
+                ul.links-list
+                  li Contact
+                  li 
+                    p 
+                      | Contact Us <br>
+                      | Office Locations <br>
+                      | Newsletter Sign-Up <br>
+                      | Social Media
+        hr
         .footer-bottom 
           .footer-bottom__rights 
             p 
