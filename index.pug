@@ -54,15 +54,21 @@ html(lang="en")
                 include ./components/property-item/property-item.pug
                 <div class="tab-pane fade show active" id="d2" role="tabpanel" aria-labelledby="home-tab">
                   .property-item
-                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-                    +property-item('property-item', 'Название планировки', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-                  
+                    - for (i = 1; i <= 5; i++)
+                      +property-item(`2d__property-item${i}.jpg`, '2D Планировки без расстановки мебели', 'Планировки квартир в 2D формате.', 'От 200 рублей')
+                    - for (i = 6; i <= 10; i++)
+                      +property-item(`2d__property-item${i}.jpg`, '2D Планировки с расстановкой мебели', 'Планировки квартир в 2D формате. С расстановкой мебели.', 'От 250 рублей')  
+                    - for (i = 11; i <= 13; i++)
+                      +property-item(`2d__property-item${i}.jpg`, '2D Планировки коммерческой недвижимости', 'Планировки коммерческой недвижимости в 2D формате. Без расстановки мебели. Цена договорная: зависит от количества комнат и подсобных помещений.', 'От 800 рублей') 
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-
+                  .property-item
+                    - for (i = 1; i <= 5; i++)
+                      +property-item(`3d__property-item${i}.jpg`, '3D планировка без расстановки мебели', 'Планировки квартир в 3D формате. Без расстановки мебели', 'От 250 рублей')
+                    - for (i = 6; i <= 10; i++)
+                      +property-item(`3d__property-item${i}.jpg`, '3D планировка с расстановки мебели', 'Планировки квартир в 3D формате. С расстановкой мебели', 'От 250 рублей')
+                    - for (i = 11; i <= 15; i++)
+                      +property-item(`3d__property-item${i}.jpg`, '3D планировка коммерческой недвижимости', 'Планировки коммерческой недвижимости в 3D формате. Без расстановки мебели', 'От 1000 рублей')                      
                 </div>
               </div>
     section.reviews 
@@ -121,7 +127,7 @@ html(lang="en")
                   | Our experienced team of analysts and <br>
                   | consultants helps our clients identify the best <br> 
                   | risk-adjusted investment opportunities.
-            .col-xl-8
+            .col-xl-7.offset-xl-1
               .footer__links
                 ul.links-list
                   li Our company 

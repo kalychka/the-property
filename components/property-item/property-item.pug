@@ -1,6 +1,7 @@
-mixin property-item(url, title, description)
+mixin property-item(url, title, description, price)
     div.card
-        img(class="card-img-top" src=require(`./assets/img/${url}.png`).default alt="Card image cap")
+        img(class="card-img-top" src=require(`./assets/img/property-items/${url}`).default alt="Card image cap")
         .card-body
             h5(class="card-title")=title
+            h6(class="card-price")=price
             p(class="card-text")=description

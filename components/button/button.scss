@@ -20,4 +20,16 @@
         color: #2fc9ef;
         font-size: 1.25rem;
     }
+
+    &:hover {
+        border: 5px solid #b09fce;
+        outline-style: unset;
+    }
+
+    &:active {
+        a {
+            color: rgba($color: #b09fce, $alpha: 0.4);
+        }
+        
+    }
 }

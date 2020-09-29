@@ -25,6 +25,15 @@ ul {
     padding: 0;
 }
 
+:hover,
+::after {
+    transition: 0.3s;
+}
+
+:active {
+    transition: 0.1s;
+}
+
 hr {
     border: 1px solid #68a4ea;
 }
@@ -75,6 +84,7 @@ nav {
     list-style: none;
     display: flex;
     li {
+        position: relative;
         margin-left: 55px;
         a {
             font-weight: bold;
@@ -83,6 +93,30 @@ nav {
             color: white;
             outline: none;
         }
+
+        &:after {
+            display: none;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            margin-left: -30px;
+            content: '';
+            box-sizing: content-box;
+            width: 60px;
+            height: 2px;
+            background-color: #b09fce;
+        }
+
+
+        &:hover {
+            a {
+                color: #b09fce;
+            }
+            &:after {
+                display: block;
+            }
+        }
+
     }
 }
 
@@ -115,9 +149,8 @@ nav {
     background-image: url(../assets/img/template__bg.png);
     background-position-x: center;
     background-position-y: bottom;
-    background-size: cover;
     background-repeat: no-repeat;
-    
+    min-height: 1800px;
     padding-top: 90px;
     padding-bottom: 400px;
     .templates__title {
@@ -130,6 +163,32 @@ nav {
     background-color: white;
     border-radius: 16px 0px 16px 16px;
     box-shadow: 0px 3px 20px 0px rgba($color: #000000, $alpha: 0.4);
+}
+
+#overlay {
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 9990;
+}
+
+#property-item__modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    
+    img {
+        width: 50%;
+        height: auto;
+    }
 }
 
 .nav-link {
@@ -215,26 +274,23 @@ nav {
 
 footer {
     position: relative;
-    padding-top: 700px;
+    
     padding-bottom: 40px;
     background-image: url(../assets/img/footer__bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 }
 
 .contact {
-    position: absolute;
-    top: -170px;
-    left: 50%;
-    width: 1200px;
-    margin-left: -600px;
     background-image: url(../assets/img/form__bg.png);
     background-repeat: no-repeat;
-    
-    padding: 130px 90px 85px 85px;
+    background-size: cover;
+    padding: 100px 90px 85px 85px;
     border-radius: 16px 0px 16px 16px;
     box-sizing: border-box;
+    margin-bottom: 140px;
+    box-shadow: 0px 8px 12px 5px rgba($color: #000000, $alpha: 0.4);
 }
 
 .contact__title-wrapper {
