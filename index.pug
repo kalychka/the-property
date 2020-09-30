@@ -8,7 +8,9 @@ html(lang="en")
     include ./components/loader/loader.pug
     section.offer
       img(src=require(`./assets/img/offer-star.png`).default).offer-parallax__star
-      img(src=require(`./assets/img/offer-ellipse.png`).default).offer-parallax__ellipse  
+      img(src=require(`./assets/img/offer-ellipse.png`).default).offer-parallax__ellipse
+      .scroll-top
+        i.fas.fa-angle-double-up
       header 
         .container
           .row
@@ -16,13 +18,11 @@ html(lang="en")
               nav 
                 ul.navigation-list 
                   li 
-                    a(href="#") Our company
+                    a(href="#about") О нас
                   li 
-                    a(href="#") Our experts
+                    a(href="#templates") Планировки
                   li 
-                    a(href="#") Our values
-                  li 
-                    a(href="#") Our contact
+                    a(href="#reviews") Отзывы
       .offer__title
         .container
           .row
@@ -36,7 +36,17 @@ html(lang="en")
               .offer__title__button
                 include ./components/button/button.pug 
                 +Button('Learn more')
-    section.templates 
+
+    section.about#about 
+      .container     
+        .row.justify-content-center
+          .col-xl-12
+            .about__video-wrapper
+              h2.about__title О нас
+              <iframe class="about__video" src="https://www.youtube.com/embed/twHs8s4BzZI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              
+            
+    section.templates#templates
       .container 
         h2.templates__title Why Arda <br> Real Estate Consulting?
         .row 
@@ -75,7 +85,7 @@ html(lang="en")
           .row.justify-content-center 
             .col-xl-3
               +Button('Contact us now')
-    section.reviews 
+    section.reviews#reviews
       .container
         .row 
           .col-xl-12
@@ -83,7 +93,7 @@ html(lang="en")
         .row.justify-content-center
           .col-xl-10
             include ./components/review/review.pug
-            div(id="reviews").carousel 
+            div(id="reviews-carousel").carousel 
               .carousel__item
                 +review('Benrns Sturaro', 'My experience with Arda Real Estate Consulting has enabled me to better assess current market risk level at any point in the home building cycle. Also, I have been able to make new valuable contacts.', 'NY', 'item1')
               .carousel__item

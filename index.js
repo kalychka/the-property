@@ -23,7 +23,7 @@ import './assets/slick-1.8.1/slick/slick.css'
 
 
 $(function() {
-    $('#reviews').slick({    
+    $('#reviews-carousel').slick({    
         infinite: true,
         autoplay: true,
         autoplaySpeed: 1800,
@@ -64,6 +64,20 @@ $(function() {
       $('#property-item__modal, #overlay').fadeOut('fast', function() {
         $('#property-item__modal, #overlay').remove();
       })
+    })
+
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+
+        if (height > 600) {
+          $('.scroll-top').addClass('scroll-top_visible');
+        } else {
+          $('.scroll-top').removeClass('scroll-top_visible');
+        };       
+    })
+
+    $('.scroll-top').on('click', (e) => {
+      $('body, html').animate({scrollTop: 0}, 400);
     })
     
 

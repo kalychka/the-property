@@ -3,6 +3,7 @@ body {
     font-family: 'Inter', serif;
     font-size: 18px;
     font-weight: normal;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -44,6 +45,37 @@ hr {
 
 .loader_show > .loader-wrapper {
     display: block;
+}
+
+.scroll-top {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 6vw;
+    height: 6vh;
+    right: 10px;
+    bottom: 10px;
+    background: linear-gradient(130deg,  #1f70e3, #f4b8c5);
+    background-size: 180%;
+    border-radius: 10px;
+    transition: all 1s ease-out;
+    cursor: pointer;
+
+    i {
+        color: white;
+        font-size: 1.25rem;
+    }
+
+    &:hover {
+        background-position: 100% 0;
+        
+    }
+}
+
+.scroll-top_visible {
+    display: flex;
 }
 
 
@@ -143,6 +175,26 @@ nav {
 
 .offer__title__button {
     width: 220px;
+}
+
+.about {
+    padding: 90px 0px;
+}
+
+.about__video-wrapper {
+    border-radius: 16px 0px 16px 16px;
+    box-shadow: 0px 3px 20px 0px rgba($color: #000000, $alpha: 0.4);
+    padding: 75px 75px 100px 70px;
+    .about__title {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    .about__video {
+        width: 100%;
+        height: 60vh;
+        
+    }
 }
 
 .templates {
