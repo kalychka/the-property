@@ -1,3 +1,6 @@
+
+/* base */
+
 html,
 body {
     font-family: 'Inter', serif;
@@ -15,6 +18,7 @@ body {
 h1, h2 {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
+    font-weight: bold;
 }
 
 p {
@@ -39,6 +43,8 @@ hr {
     border: 1px solid #68a4ea;
 }
 
+/* loader */
+
 .loader_hide > .loader-wrapper {
     display: none;
 }
@@ -46,6 +52,8 @@ hr {
 .loader_show > .loader-wrapper {
     display: block;
 }
+
+/* scrool */ 
 
 .scroll-top {
     display: none;
@@ -78,6 +86,7 @@ hr {
     display: flex;
 }
 
+/* offer */ 
 
 .offer {
     
@@ -177,6 +186,8 @@ nav {
     width: 220px;
 }
 
+/* about */
+
 .about {
     padding: 90px 0px;
 }
@@ -196,6 +207,8 @@ nav {
         
     }
 }
+
+/* templates */ 
 
 .templates {
     background-image: url(../assets/img/template__bg.png);
@@ -259,9 +272,6 @@ nav {
     font-size: 1.125rem;
 }
 
-
-
-
 .tab-content {
     padding: 75px 75px 100px 70px;
 }
@@ -272,6 +282,8 @@ nav {
     row-gap: 20px;
     justify-items: center;
 }
+
+/* reviews */
 
 .reviews {
     padding-top: 90px;
@@ -284,21 +296,16 @@ nav {
 
 .reviews__title {
     text-align: center;
-    margin-bottom: 186px;
+    margin-bottom: 120px;
 }
 
 .carousel {
     position: relative;
-    
-    
+    padding: 0px 75px;
 }
 
-.carousel__item {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
+.carousel__item {  
     padding: 70px 0px;
-
 }
 
 .prevButton,
@@ -306,7 +313,7 @@ nav {
     display: flex;
     position: absolute;
     top: 50%;
-    margin-top: -37px;
+    margin-top: -35px;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -323,16 +330,18 @@ nav {
 }
 
 .prevButton {
-    left: -100px;
+    left: 0;
 }
 
 .nextButton {
-    right: -100px;  
+    right: 0;  
 }
 
 .slick-slide {
     outline: none;
 }
+
+/* footer */
 
 footer {
     position: relative;
@@ -357,7 +366,7 @@ footer {
 
 .contact__title-wrapper {
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     h2 {
         margin: 0px 0px 30px 0px;
         font-size: 2.25rem;
@@ -368,15 +377,23 @@ footer {
     }
 }
 
-.contact__form__message {
-    
+
+
+
+
+.contact__form__message {   
+    position: relative;
     display: flex;
     flex-direction: column;
-    p {
+    .placeholder {
+        position: absolute;
+        left: 20px;
+        top: 20px;
         font-size: 1.0037rem;
         font-weight: bold;
-        color: white;
+        color: #546e7a;
         margin-bottom: 18px;
+        
     }
     textarea {
         max-height: 220px;
@@ -385,30 +402,35 @@ footer {
         padding: 10px;
         box-sizing: border-box;
         
-        &::placeholder,
-        & {
-            line-height: 1.5rem;
-            font-family: 'Inter', serif;
-            font-size: 1.0037rem;
-            color: #546e7a;
-        }
+        line-height: 1.5rem;
+        font-family: 'Inter', serif;
+        font-size: 1.0037rem;
+        color: #546e7a;
         &:hover,
         &:focus {
             outline: none;
         }
+
+
     }
 }
 
 .contact__form__data {
-    grid-column: 1 / 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .name {
-        margin-bottom: 37px;
+        margin-bottom: 50px;
     } 
 }
 
+
+
+
 .contact__form__button {
-    
-    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
     margin-top: 23px;
     button {
         display: flex;

@@ -89,9 +89,9 @@ html(lang="en")
       .container
         .row 
           .col-xl-12
-            h2.reviews__title Client’s testimonials
+            h2.reviews__title Отзывы клиентов
         .row.justify-content-center
-          .col-xl-10
+          .col-xl-12
             include ./components/review/review.pug
             div(id="reviews-carousel").carousel 
               .carousel__item
@@ -118,17 +118,19 @@ html(lang="en")
                     .contact__form__data
                       include ./components/input/text-field.pug
                       .name
-                        +text-field('Name', 'text', 'Name')
+                        +text-field('Name', 'text')
                       .email
-                        +text-field('Email', 'email', 'Email')
+                        +text-field('Email', 'email')
                   .col-xl-7
                     .contact__form__message
-                      p Your message
+                      span.placeholder Your message
                       textarea(name="message", cols="30", rows="10")
-                      .contact__form__button
-                        button(form="request")
-                          | Submit
-                          i.fas.fa-long-arrow-alt-right
+                .row
+                  .col-xl-12
+                    .contact__form__button
+                      button(form="request")
+                        | Submit
+                        i.fas.fa-long-arrow-alt-right
         .footer-wrapper
           .row               
             .col-xl-4

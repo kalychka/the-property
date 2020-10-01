@@ -30,6 +30,7 @@ $(function() {
         speed: 600,
         slidesToShow: 1,
         slidesToScroll: 1,
+        
         prevArrow: `<div class="prevButton"> <i class="fas fa-long-arrow-alt-left"></i> </div>`,
         nextArrow: `<div class="nextButton"> <i class="fas fa-long-arrow-alt-right"></i> </div>`,
     });
@@ -79,6 +80,10 @@ $(function() {
     $('.scroll-top').on('click', (e) => {
       $('body, html').animate({scrollTop: 0}, 400);
     })
+
+    $('.text-field, .contact__form__message').on('click', function(){
+      $(this).addClass('text-field_active');
+    }) 
     
 
   });

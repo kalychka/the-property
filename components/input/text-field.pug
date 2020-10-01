@@ -1,4 +1,5 @@
-mixin text-field(title, type, placeholder)
+mixin text-field(title, type)
     .text-field
-        p=title
-        input(type=type placeholder=placeholder)
+        span(class="placeholder")=title
+        input(type=type)
+        
