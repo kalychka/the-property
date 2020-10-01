@@ -3,7 +3,7 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+    title The property
   body
     include ./components/loader/loader.pug
     section.offer
@@ -28,14 +28,16 @@ html(lang="en")
           .row
             .col-xl-8
               .title-wrapper
-                h1.title Expert advice for <br> discerning buyers
+                h1.title Тут какой-то ваш <br> отличный заголовок
                 p.description 
                   | Our consultants and research analysts work together <br> 
                   | to provide understanding and clarity through the <br>
-                  | intricacies of an ever changing real estate cycle. 
+                  | intricacies of an ever changing real estate cycle.
+          .row
+            .col-xl-3
               .offer__title__button
                 include ./components/button/button.pug 
-                +Button('Learn more')
+                +Button('Связаться с нами', '#contact')
 
     section.about#about 
       .container     
@@ -104,7 +106,7 @@ html(lang="en")
                 +review('Dave Matthews', 'Arda Real Estate Consulting has provided our company with sound, insightful, and timely consulting in a number of real estate related areas. Specifically, reports and analysis for credit reporting agencies, company valuation studies, and presentations to foreign investors have been areas where they have excelled.', 'Oregon', 'item2')
     footer
       .container     
-        .contact
+        .contact#contact
           .row
             .col-12
               .contact__title-wrapper 

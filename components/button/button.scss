@@ -1,13 +1,11 @@
 .button {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: space-around;  
     height: 75px;
     background-color: white;
     border-radius: 16px 0px 16px 16px;
     a {
-        
         text-decoration: none;
         outline: none;
         color: #37474f;
@@ -17,6 +15,7 @@
     }
 
     i {
+       
         color: #2fc9ef;
         font-size: 1.25rem;
     }
@@ -24,11 +23,13 @@
     &:hover {
         border: 5px solid #b09fce;
         outline-style: unset;
+        transition: all .3s ease-out;
     }
 
     &:active {
         a {
             color: rgba($color: #b09fce, $alpha: 0.4);
+            transition: all .1s ease-out;
         }
         
     }

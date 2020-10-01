@@ -30,14 +30,7 @@ ul {
     padding: 0;
 }
 
-:hover,
-::after {
-    transition: 0.3s;
-}
 
-:active {
-    transition: 0.1s;
-}
 
 hr {
     border: 1px solid #68a4ea;
@@ -127,6 +120,7 @@ nav {
     li {
         position: relative;
         margin-left: 55px;
+       
         a {
             font-weight: bold;
             text-transform: uppercase;
@@ -136,9 +130,9 @@ nav {
         }
 
         &:after {
-            display: none;
+            visibility: hidden;
             position: absolute;
-            bottom: -5px;
+            bottom: -15px;
             left: 50%;
             margin-left: -30px;
             content: '';
@@ -146,15 +140,19 @@ nav {
             width: 60px;
             height: 2px;
             background-color: #b09fce;
+            
         }
 
 
         &:hover {
             a {
                 color: #b09fce;
+                transition: all 1s ease-out;
             }
             &:after {
-                display: block;
+                visibility: visible;
+                transition: .5s cubic-bezier(0.22, 0.61, 0.36, 1);
+                bottom: -5px;
             }
         }
 
@@ -169,7 +167,6 @@ nav {
     .title {
         color: white;
         font-size: 3.125rem;
-        letter-spacing: 2px;
         line-height: 3.75rem;
         margin-bottom: 40px;
     }
@@ -182,9 +179,6 @@ nav {
 
 }
 
-.offer__title__button {
-    width: 220px;
-}
 
 /* about */
 
@@ -392,8 +386,6 @@ footer {
         font-size: 1.0037rem;
         font-weight: bold;
         color: #546e7a;
-        margin-bottom: 18px;
-        
     }
     textarea {
         max-height: 220px;
@@ -428,6 +420,9 @@ footer {
 
 
 
+
+
+
 .contact__form__button {
     display: flex;
     justify-content: flex-end;
@@ -454,6 +449,7 @@ footer {
         &:hover {
             border: 5px solid white;
             outline-style: unset;
+            transition: all .3s ease-out;
         }
     
         &:active {   
